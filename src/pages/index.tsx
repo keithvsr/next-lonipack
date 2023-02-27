@@ -36,7 +36,9 @@ export default function Home() {
         <div className={styles.description}>
           <p>Welcome to the Loni Pack!</p>
           <div>
-            <code className={styles.code}>care to join?</code>
+            <Link href="/join">
+              <code className={styles.code}>care to join?</code>
+            </Link>
           </div>
         </div>
 
@@ -51,7 +53,8 @@ export default function Home() {
               priority
             />
             <figcaption>
-              This is Shiloh, very serious gentledog and chief Loni officer
+              <span className={styles.shiloh}>Shiloh</span>, very serious
+              gentledog and chief Loni officer
             </figcaption>
           </figure>
           <Link href="/pack">

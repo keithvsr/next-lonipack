@@ -7,6 +7,11 @@
   /* min-height: 100vh; */
 }
 
+.shiloh {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;
