@@ -76,16 +76,15 @@
 }
 
 .description p {
-  font-family: 'Barlow', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 800;
-  text-decoration: underline;
+  font-size: 1.6rem;
+  font-weight: 600;
   position: relative;
   margin: 0;
   padding: 1rem;
   background-color: rgba(var(--callout-rgb), 0.5);
   border: 1px solid rgba(var(--callout-border-rgb), 0.3);
   border-radius: var(--border-radius);
+  box-shadow: 0 0 0.3rem 0.3rem #ff8c003f;
 }
 
 .code {
