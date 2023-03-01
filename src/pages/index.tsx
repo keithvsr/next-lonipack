@@ -1,64 +1,50 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "~/styles/Home.module.css";
 import Link from "next/link";
+import { Barlow } from "next/font/google";
+import styles from "~/styles/Home.module.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const barlow = Barlow({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: "normal",
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>Welcome to the Loni Pack</title>
-        <meta name="description" content="The Loni Pack" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <main className={styles.main}>
         <div className={styles.description}>
-          <p>Welcome to the Loni Pack!</p>
+          <p className={barlow.className}>Welcome to the Loni Pack!</p>
           <div>
             <Link href="/join">
               <code className={styles.code}>care to join?</code>
             </Link>
           </div>
         </div>
-
         <div className={styles.center}>
-          <figure>
-            <Image
-              className={styles.logo}
-              src="/images/shiloh/bwuh.png"
-              alt="Shiloh Bear"
-              width={378}
-              height={391}
-              priority
-            />
-            <figcaption>
-              <span className={styles.shiloh}>Shiloh</span>, very serious
-              gentledog and chief Loni officer
+          <figure className={styles.headshotfigure}>
+            <div className={styles.headshot}>
+              <Image
+                priority
+                fill
+                className={styles.logo}
+                src="/images/shiloh/bwuh.jpg"
+                alt="Shiloh Bear"
+              />
+            </div>
+            <figcaption className={styles.headshotcaption}>
+              <p className={styles.homedog}>Shiloh</p>, very serious gentledog
+              and chief Loni officer
             </figcaption>
           </figure>
+        </div>
+        <div className={styles.description}>
           <Link href="/pack">
-            <div className={styles.card}>Check out the whole pack!</div>
+            <div className={styles.code}>Check out the whole pack!</div>
           </Link>
         </div>
       </main>
